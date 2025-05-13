@@ -64,6 +64,7 @@ footer .footer-section {
   margin-bottom: 30px;
 }
 
+
 @media (max-width: 640px) {
     .hide-sm {
       display: none;

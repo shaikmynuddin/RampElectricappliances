@@ -9,6 +9,7 @@ body {
   font-family: Arial, sans-serif;
   color: var(--premium-white);
   background-color: #0f172a; /* Optional: dark background base */
+  
 }
 
 /* Smooth horizontal scroll animation */

@@ -40,14 +40,30 @@ body {
 
 /* Footer styles - keep dark */
 footer {
-  background-color: rgba(0, 0, 0, 0.2) !important;
-  color: var(--premium-white) !important;
+  background-color: #121212; /* or #000 or #1a1a1a for a dark tone */
+  color: #ffffff; /* White text for contrast */
+  padding: 40px 20px;
+}
+
+footer a {
+  color: #dddddd;
+  text-decoration: none;
 }
 
 footer a:hover {
-  color: var(--premium-white) !important;
-  opacity: 1 !important;
+  color: #ffffff;
+  text-decoration: underline;
 }
+
+footer h4, footer h5 {
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+footer .footer-section {
+  margin-bottom: 30px;
+}
+
 @media (max-width: 640px) {
     .hide-sm {
       display: none;

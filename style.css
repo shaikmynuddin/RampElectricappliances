@@ -1,0 +1,55 @@
+:root {
+  --premium-white: #f8f9fa; /* Premium white color */
+  --premium-white-80: rgba(248, 249, 250, 0.8); /* 80% opacity */
+  --premium-white-60: rgba(248, 249, 250, 0.6); /* 60% opacity */
+}
+
+/* Base body styles */
+body {
+  font-family: Arial, sans-serif;
+  color: var(--premium-white);
+  background-color: #0f172a; /* Optional: dark background base */
+}
+
+/* Smooth horizontal scroll animation */
+@keyframes scroll-x {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-scroll-x {
+  display: inline-flex;
+  animation: scroll-x 20s linear infinite;
+  min-width: 100%;
+}
+
+/* Logo slider container */
+.logo-slider-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Logo item */
+.logo-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0 1.5rem;
+}
+
+/* Footer styles - keep dark */
+footer {
+  background-color: rgba(0, 0, 0, 0.2) !important;
+  color: var(--premium-white) !important;
+}
+
+footer a:hover {
+  color: var(--premium-white) !important;
+  opacity: 1 !important;
+}
+@media (max-width: 640px) {
+    .hide-sm {
+      display: none;
+    }
+  }

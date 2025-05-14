@@ -8,6 +8,8 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="icon" href="fas fa-paper-plane transform rotate-45" type="image/png" sizes="16x16">
 
   <script>
     tailwind.config = {
@@ -29,51 +31,42 @@
 <body class="bg-ramp-dark text-white">
 
   <!-- Navbar -->
-  <!-- Navbar -->
   <nav id="navbar"
-    class="fixed top-0 left-0 w-full z-50 bg-transparent backdrop-blur-sm text-white transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-      <!-- Hamburger -->
-      <div class="md:hidden text-2xl cursor-pointer" onclick="toggleMenu()">
-        <i class="fas fa-ellipsis-v"></i>
-      </div>
-
-      <div class="flex items-center gap-1 font-bold text-xl">
-        ramp
-        <i class="fas fa-paper-plane transform rotate-45"></i>
-      </div>
-
-      <!-- Links -->
-      <div id="navLinks" class="hidden md:flex gap-6 text-sm">
-        <a href="#" class="nav-link px-3 py-1 rounded">Products</a>
-        <a href="#" class="nav-link px-3 py-1 rounded">Solutions</a>
-        <a href="#" class="nav-link px-3 py-1 rounded">Customers</a>
-        <a href="#" class="nav-link px-3 py-1 rounded">Resources</a>
-        <a href="#" class="nav-link px-3 py-1 rounded">Pricing</a>
-      </div>
-
-      <!-- Buttons -->
-      <div class="hidden md:flex gap-4">
-        <button class="signin-btn border px-4 py-2 rounded-md text-sm">Sign in</button>
-        <button class="demo-btn px-4 py-2 rounded-md text-sm font-semibold">See a demo</button>
-      </div>
+  class="fixed top-0 left-0 w-full z-50 bg-transparent backdrop-blur-sm text-white transition-all duration-300">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    
+    <!-- Hamburger (with dynamic icon) -->
+    <div id="hamburger" class="md:hidden text-2xl cursor-pointer" onclick="toggleMenu()">
+  <i class="fas fa-ellipsis-v"></i>
     </div>
-  </nav>
+
+    <!-- Logo -->
+    <div class="flex items-center gap-1 font-bold text-xl">
+      ramp
+      <i class="fas fa-paper-plane transform rotate-45"></i>
+    </div>
+
+    <!-- Links -->
+    <div id="navLinks" class="hidden md:flex gap-6 text-sm">
+      <a href="#" class="nav-link px-3 py-1 rounded">Products</a>
+      <a href="#" class="nav-link px-3 py-1 rounded">Solutions</a>
+      <a href="#" class="nav-link px-3 py-1 rounded">Customers</a>
+      <a href="#" class="nav-link px-3 py-1 rounded">Resources</a>
+      <a href="#" class="nav-link px-3 py-1 rounded">Pricing</a>
+      <!-- These two are only visible on mobile -->
+      <button class="signin-btn border px-4 py-2 rounded-md text-sm md:hidden">Sign in</button>
+      <button class="demo-btn px-4 py-2 rounded-md text-sm font-semibold md:hidden">See a demo</button>
+    </div>
+
+    <!-- Desktop Buttons -->
+    <div class="hidden md:flex gap-4">
+      <button class="signin-btn border px-4 py-2 rounded-md text-sm">Sign in</button>
+      <button class="demo-btn px-4 py-2 rounded-md text-sm font-semibold">See a demo</button>
+    </div>
+  </div>
+</nav>
 
 
-  <script>
-    function toggleMenu() {
-      const nav = document.getElementById('navLinks');
-      nav.classList.toggle('hidden');
-      nav.classList.toggle('flex');
-      nav.classList.toggle('flex-col');
-      nav.classList.toggle('absolute');
-      nav.classList.toggle('top-16');
-      nav.classList.toggle('bg-ramp-dark');
-      nav.classList.toggle('w-full');
-      nav.classList.toggle('text-center');
-    }
-  </script>
 
 
   <!-- Section 1: Hero -->
@@ -590,7 +583,7 @@
   </div>
 </footer>
 
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
 </body>
 
 </html>

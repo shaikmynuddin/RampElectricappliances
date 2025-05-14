@@ -2,7 +2,7 @@
 function toggleMenu() {
   const nav = document.getElementById('navLinks');
   const hamburger = document.getElementById('hamburger').querySelector('i');
-
+ ""
   nav.classList.toggle('hidden');
   nav.classList.toggle('flex');
   nav.classList.toggle('flex-col');

@@ -6,6 +6,7 @@
 }
 
 
+
 /* Base body styles */
 body {
   font-family: Arial, sans-serif;
@@ -151,6 +152,40 @@ body {
     font-family: 'Font Awesome 6 Free';
     font-weight: 900;
   }
+}
+/* Add this to your CSS */
+@media (max-width: 640px) {
+  /* Ensure white sections cover full width */
+  section.bg-white, 
+  .bg-white {
+    margin-left: -1rem;
+    margin-right: -1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* Fix footer margins on mobile */
+  .footer {
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
+}
+
+/* Keep nav text white when over dark sections */
+#navbar.scrolled-over-dark {
+  color: white !important;
+}
+
+#navbar.scrolled-over-dark .nav-link,
+#navbar.scrolled-over-dark .signin-btn,
+#navbar.scrolled-over-dark .demo-btn {
+  color: white !important;
+  border-color: white !important;
+}
+
+#navbar.scrolled-over-dark .demo-btn {
+  background-color: var(--ramp-lime) !important;
+  color: black !important;
 }
 
 

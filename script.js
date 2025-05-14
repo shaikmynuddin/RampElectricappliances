@@ -47,8 +47,19 @@ window.addEventListener("scroll", function () {
   const links = navbar.querySelectorAll(".nav-link");
   const signin = navbar.querySelector(".signin-btn");
   const demo = navbar.querySelector(".demo-btn");
-
   const triggerPoint = 100;
+
+  // Check if we're over a dark section (footer)
+  const footer = document.querySelector('.footer');
+  const footerRect = footer.getBoundingClientRect();
+  const isOverDark = footerRect.top <= navbar.offsetHeight;
+
+  if (isOverDark) {
+    navbar.classList.add('scrolled-over-dark');
+    return;
+  } else {
+    navbar.classList.remove('scrolled-over-dark');
+  }
 
   if (window.scrollY > triggerPoint) {
     navbar.classList.remove("text-white");

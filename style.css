@@ -205,10 +205,29 @@ body {
 }
 @media (max-width: 768px) {
   .footer {
-    margin: 0 -16px -16px -16px;
+    margin: 0 -16px -76px -16px;
     padding: 0;
     display: flex;
     text-align: center;
+  }
+}
+/* Team section responsive styles */
+@media (max-width: 767px) {
+  .team-member-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .team-member-card img {
+    margin-bottom: 1rem;
+  }
+  
+  .team-member-info {
+    width: 100%;
+  }
+  
+  .team-member-social {
+    justify-content: center !important;
   }
 }
 
